@@ -66,9 +66,8 @@
                 border-bottom-right-radius: 10px;
                 color: #fff;
             }
-            :hover{
+            .nav-link:hover{
                 background-color: #242321;
-                box-shadow: #8a8572 0 3px 10px;
                 color: #fff;
                 border-radius: 10px;
             }
@@ -92,6 +91,7 @@
             margin: 6px 0;
         }
     }
+    
     .menu_icon_Class span:nth-child(2){
         display: none;
     }
