@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Montserrat:wght@300;500&family=Roboto:wght@300;500&family=Sora&display=swap');
+
+@keyframes animate {
+    0% {background-color: #352808;}
+    100%{background-color: rgba($color: #131313, $alpha: 0.5);}
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #eee;
+}
+
+p{
+    font-size: 1.3rem;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.btn{
+    box-shadow: 0 3px 5px rgba($color: #131313, $alpha: 0.5);
+    font-size: 1.2rem;
+    color: rgb(245, 204, 129);
+    font-weight: 600;
+}
+.btn:hover{
+    border: 1px solid rgb(245, 221, 162);
+    color: #fff;
+    box-shadow: none;
+}
+
+
+@media screen and (max-width: 425px){
+    h4{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Cormorant Garamond, "Helvetica Neue", sans-serif; }

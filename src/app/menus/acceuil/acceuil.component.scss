@@ -1,0 +1,230 @@
+.banner{
+    height: 500px;
+    background-image: url('/../assets/images/2.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+    .ban-text{
+        text-align: center;
+        background-color: rgba($color: #575555, $alpha: 0.5);
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 3px 8px rgba($color: #3b321d, $alpha: 1.0);
+        h1{
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgb(245, 204, 129);
+        } 
+    }
+}
+
+// section about
+
+.section-about{
+    background-color: #fff;
+    padding: 50px;
+    
+    .about{
+        padding: 20px;
+        .btn{
+            background-color: #120e04;
+        }
+        text-align: center;
+        h2{
+            padding: 10px;
+        }
+        p{
+            // padding-left: 10px;
+        }
+        .image-about{
+            background-image: url('/../assets/images/bat4.png');
+            background-position: center;
+            background-size: cover;
+        }
+    }   
+}
+
+// fin about 
+// section service 
+
+.section-service{
+    .service{
+        text-align: center;
+        .btn{
+            margin: 25px;
+            background-color: #120e04;
+        }
+        h2{
+            color: #120e04;
+            font-weight: 700;
+        }
+        .card-body{
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            
+            h3{
+                font-weight: 700;
+                text-transform: capitalize;
+                font-size: 1.8rem;
+            }
+        }
+        
+    }
+}
+
+// section contact
+
+.section-contact{ 
+    .container{
+        background-color: #fff;
+        padding: 20px;
+    
+    .nct{
+        color: #131313;
+        font-size: 2rem;
+    }
+    .contact-img{
+        img{
+            width: 500px;
+            height: 450px;
+        }
+    }
+    
+    h2{
+        color: #fff;
+    }
+    .contact-form{
+        // background-image: url('/../assets/images/2.png');
+        background-position: center;
+        background-size: cover;
+        border-radius: 5px;
+        box-shadow: 0 3px 8px rgba($color: #3b321d, $alpha: 0.7);
+    }
+
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 5px;
+        box-shadow: 0 3px 8px rgba($color: #3b321d, $alpha: 0.7);
+        margin-top: 25px;
+
+        .submitMessage{
+            color: rgb(125, 236, 125);
+            font-size: 1.2rem;
+            background-color: #2e2d2b;
+            padding: 0 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+    }
+
+    .btn{
+        background-color: #3b321d;
+        box-shadow: 0 3px 7px rgba($color: #131313, $alpha: 0.5);
+    }
+
+    .autre-contact{
+    
+        .info{
+            text-align: center;
+            border: #2e2d2b 1px solid;
+            border-radius: 30px;
+            padding: 10px 0;
+            background-color: #eee;
+            position: relative;
+            margin: 25px auto;
+        }
+        .btn{
+            position: absolute;
+            top: -35px;
+            left: 0;
+            font-size: 2.5rem;
+            border-radius: 50%;
+        }
+        h4{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 572px){
+
+    .banner{
+        height: 500px;
+        background-image: url('/../assets/images/2.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+    
+        .ban-text{
+            text-align: center;
+            background-color: rgba($color: #575555, $alpha: 0.5);
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 3px 8px rgba($color: #3b321d, $alpha: 1.0);
+            h1{
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: rgb(245, 204, 129);
+            } 
+        }
+    }
+
+    .section-about{
+        background-color: #fff;
+        padding: 30px;
+        
+        .about{
+            padding: 10px;
+            .btn{
+                background-color: #120e04;
+            }
+            text-align: center;
+            h2{
+                padding: 5px;
+            }
+            h1{
+                font-size: 2rem;
+            }
+        }   
+    }
+
+    .service{
+        .card-body{
+            margin-bottom: 20px;
+        }
+    }
+
+    .section-contact{
+        .container{
+            .contact-img{
+                img{
+                    width: 400px;
+                    height: 350px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .form-group{
+                .submitMessage{
+                    font-size: 1rem;
+                    padding: 0 20px;
+                }
+                
+            }
+        }
+    }
+}

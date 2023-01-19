@@ -1,0 +1,150 @@
+<div class="banner">
+    <ngb-carousel *ngIf="images" [showNavigationArrows]="showNavigationArrows"
+	        [showNavigationIndicators]="showNavigationIndicators">
+        <ng-template ngbSlide *ngFor="let image of images">
+                <div class="picsum-img-wrapper">
+                    <img [src]="image" alt="Random slide" />
+                </div>
+                <div class="carousel-caption">
+                    <div class="ban-text">
+                        <h1>my-vip-boat</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, reiciendis.</p>
+                        <a href="" type="btn" class="btn">En savoir plus</a>
+                    </div>
+                </div>
+        </ng-template>
+    </ngb-carousel>
+
+</div>
+
+<!-- section about -->
+
+<div class="main">
+    <div class="section-about">
+        <div class="container">
+            <div class="about my-4">
+                
+                    <h2>A propos</h2>
+                    <h1>my-vip-boat</h1>
+                    <p class="text-start"> 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Eius dignissimos commodi error vel minus, 
+                        ullam autem odio soluta labore suscipit?
+                    </p>
+                    <a routerLink="/a-propos" type="btn" class="btn">En savoir plus</a>
+            </div>
+        </div>
+    </div>
+    <!-- fin about -->
+    
+    <!-- section service  -->
+    
+    <div class="section-service">
+        <div class="container">
+            <div class="service p-4">
+                <h2 class="py-3 text-center">Nos services</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 mb-3">
+                        <div class="card-body">
+                            <h3>service 1</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>   
+                    </div>
+                    <div class="col-md-6 col-lg-6 mb-3">
+                        <div class="card-body">
+                            <h3>service 1</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="" type="btn" class="btn">Plus de services</a>
+            </div>
+        </div>
+    </div>
+    <div class="section-contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 contact-img mt-5">
+                    <img src="/../assets/images/contact.png" alt="">
+                </div>
+                
+                <div class="col-lg-4">
+                    <!-- <div class="row"> -->
+                        
+                        <form [formGroup]="contactForm" class="form-group p-4">
+                            
+                            <h2 class="nct">Nous Contacter</h2>
+                            <hr class="mb-5">
+                        <!-- Nom -->
+                        <mat-form-field>
+                            <mat-label>Nom</mat-label>
+                            <input matInput formControlName="name">
+                        </mat-form-field>
+                        <small class="mb-3" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">Merci de renseigner votre nom</small>
+                        
+                        <!-- Email -->
+                        <mat-form-field>
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="email">
+                        </mat-form-field>
+                        <small class="mb-3" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">Merci de renseigner votre adresse email</small>
+                        
+                        <!-- Téléphone -->
+                        <mat-form-field>
+                            <mat-label>Téléphone</mat-label>
+                            <input matInput formControlName="phone">
+                        </mat-form-field>
+                        <small class="mb-3" *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">Merci de renseigner votre numéro de Téléphone</small>
+                        
+                        <!-- message -->
+                        <mat-form-field>
+                            <mat-label>Message</mat-label>
+                            <textarea matInput formControlName="message"></textarea>
+                        </mat-form-field> 
+                        <small class="mb-3" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">Merci d'écrire votre méssage</small>
+                        
+                        <button type="submit" class="btn" mat-raised-button [disabled]="contactForm.invalid" (click)="onSubmit(contactForm.value)">Envoyer le Message</button>
+                        
+                        <p *ngIf="isSubmit" class="submitMessage mt-3">{{ submitMessage }}</p>
+                        
+                    </form>
+                    <!-- </div> -->
+
+                </div>
+            </div>
+            
+            <!-- autre info de contact -->
+            <div class="autre-contact my-5">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="info"> 
+                            <button type="button" class="btn">
+                                <i class="bi bi-envelope-at-fill"></i>  
+                            </button>
+                            <h4>Email</h4>
+                            <p>info@myvipboat.com</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <button type="button" class="btn">
+                                <i class="bi bi-telephone-fill"></i>
+                            </button>
+                            <h4>Téléphone</h4>
+                            <p>xxxx xxx xxx</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="info">
+                            <button type="button" class="btn">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </button>
+                            <h4>Adresse</h4>
+                            <p>Pays-ville</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

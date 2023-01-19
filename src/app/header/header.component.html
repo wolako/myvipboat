@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand pt-4 logo" routerLink="/"><p>my-<span>vip</span>-boat</p></a>
+    <div class="menu-icon"     
+    (click)="isMenuOpen = !isMenuOpen"
+    data-bs-toggle="collapse" 
+    data-bs-target="#navbarNav" aria-controls="navbarNav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="collapse navbar-collapse" 
+    [ngClass]="{'show': isMenuOpen}" 
+    id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-lg-0">
+        <li *ngFor="let nav of navItems"  class="nav-item">
+          <a
+            class="nav-link pt-3 active"
+            [routerLink]="nav.path"
+            routerLinkActive="active" 
+            (click)="onMenuLinkClick()"
+            >{{ nav.name }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
